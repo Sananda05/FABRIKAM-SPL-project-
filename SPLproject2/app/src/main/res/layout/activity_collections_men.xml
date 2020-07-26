@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectionsMen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Collection"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/s3" />
+    <ImageView
+        android:id="@+id/shirt4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/s4" />
+
+    <ImageView
+        android:id="@+id/shirt1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/s2"
+        />
+    <ImageView
+        android:id="@+id/shirt2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/s1"
+        />
+
+
+    <TextView
+        android:id="@+id/price1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="260dp"
+        android:text="Price: 1500 taka"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="260dp"
+        android:text="Price: 1400 taka"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="560dp"
+        android:text="Price: 2000 taka"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="560dp"
+        android:text="Price: 1700 taka"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/Shirt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/roundredbutton"
+        android:text="Buy"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/Shirt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/roundredbutton"
+        android:textColor="@android:color/white"
+        android:text="Buy"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/Shirt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/roundredbutton"
+        android:textColor="@android:color/white"
+        android:text="Buy"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/Shirt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/roundredbutton"
+        android:textColor="@android:color/white"
+        android:text="Buy"
+        android:textStyle="bold"
+        />
+
+    </RelativeLayout>
+
+</ScrollView>

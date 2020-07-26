@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "555473825345",
+    "firebase_url": "https://splproject2.firebaseio.com",
+    "project_id": "splproject2",
+    "storage_bucket": "splproject2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555473825345:android:4a605130523afd410fe0c0",
+        "android_client_info": {
+          "package_name": "com.sananda.splproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555473825345-j8jbn93ofj61gubsoiklul2an2q17rlk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sananda.splproject",
+            "certificate_hash": "594fac1bf5de3b3c519756b6972faa81e8e7d832"
+          }
+        },
+        {
+          "client_id": "555473825345-rg4ru59khhpm1rmb8odlg6ekvda4kprq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJgN0V-QlQcoy9gnKqNvbNDqqKwtqFFj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555473825345-rg4ru59khhpm1rmb8odlg6ekvda4kprq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SPLproject</string>
+
+    <string name="info">
+        Through this app we can not only communicate with our tailor
+        but also choose the fabric design, and size from the default
+        design of the app.ON the other hand, there will be an option
+        for the use to customize their own clothes.
+    </string>
+</resources>
