@@ -29,7 +29,7 @@ public class Item extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent;
-                intent = new Intent(Item.this, CollectionsMen.class);
+                intent = new Intent(Item.this, DesignType.class);
                 startActivity(intent);
             }
         });

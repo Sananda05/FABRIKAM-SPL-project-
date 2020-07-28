@@ -1,51 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:id="@+id/drawerlayout"
     tools:context=".Menu">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginLeft="50dp"
-            android:text="Shop"
-            android:background="@drawable/roundredbutton"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:id="@+id/shop"/>
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="150dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/layouttoolbar"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/roundredbutton"
-            android:textColor="@android:color/white"
-            android:text="Measurement"
-            android:textStyle="bold"
-            android:id="@+id/measurement"/>
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
 
-    <Button
+
+        <Button
+            android:id="@+id/shop"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/roundredbutton"
+            android:text="Shop"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+             />
+
+        <Button
+            android:id="@+id/fabrics"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundredbutton"
+            android:text="Fabrics"
+            android:layout_marginTop="-150dp"
+            android:layout_marginLeft="200dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-   android:layout_marginTop="150dp"
-        android:layout_marginStart="280dp"
-        android:text="About US"
-        android:textStyle="bold"
-        android:background="@drawable/roundbutton"
-        android:textColor="@android:color/black"
-        android:id="@+id/info"
-        />
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        >
+    </com.google.android.material.navigation.NavigationView>
 
 
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

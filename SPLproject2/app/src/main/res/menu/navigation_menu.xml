@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/userprofile"
+        />
+
+    <item android:id="@+id/orderList"
+        android:title="Order List"
+        android:icon="@drawable/orderlist"/>
+
+<item android:title="Others">
+
+    <menu>
+        <item android:id="@+id/aboutUS"
+            android:title="About US"
+            android:icon="@drawable/aboutus"/>
+
+        <item android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+    </menu>
+
+</item>
+
+
+</menu>
