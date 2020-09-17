@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PaymentMethod">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@android:color/white"
+        android:text="Payment"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payment"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp">
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Online"
+        android:textSize="18dp"
+        android:id="@+id/online"
+        android:onClick="paymentButton"
+        />
+    <RadioButton
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cash on delivery"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:id="@+id/deliveryCash"
+        android:onClick="paymentButton"
+        />
+   </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundredbutton"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="130dp"/>
+
+
+</LinearLayout>

@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -31,7 +34,9 @@ public class CollectionsMen extends AppCompatActivity {
     private Button b3;
     private Button b4;
 
-    int kount=0;
+    DatabaseReference databaseReference;
+
+    String cost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +47,23 @@ public class CollectionsMen extends AppCompatActivity {
         b2 = findViewById(R.id.Shirt2);
         b3 = findViewById(R.id.Shirt3);
         b4 = findViewById(R.id.Shirt4);
+        p1 = findViewById(R.id.price1);
+        p2 = findViewById(R.id.price2);
+        p3 = findViewById(R.id.price3);
+        p4 = findViewById(R.id.price4);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
+       b1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-                //  store("b1Shirt");
-                 kount++;
-                Intent intent;
-                intent = new Intent(CollectionsMen.this, Cust_profile.class);
-                startActivity(intent);
+                cost=p1.getText().toString().trim();
+                saveData(cost);
+                Intent i=new Intent(CollectionsMen.this,PaymentMethod.class);
+                startActivity(i);
             }
         });
 
@@ -62,30 +72,41 @@ public class CollectionsMen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //store("b2Shirt");
+                cost=p2.getText().toString().trim();
+                saveData(cost);
+                Intent i=new Intent(CollectionsMen.this,PaymentMethod.class);
+                startActivity(i);
+            }
+        });
 
-                Intent intent;
-                intent = new Intent(CollectionsMen.this, Cust_profile.class);
-                startActivity(intent);
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cost=p3.getText().toString().trim();
+               saveData(cost);
+                Intent i=new Intent(CollectionsMen.this,PaymentMethod.class);
+                startActivity(i);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cost=p4.getText().toString().trim();
+                saveData(cost);
+                Intent i=new Intent(CollectionsMen.this,PaymentMethod.class);
+                startActivity(i);
             }
         });
     }
 
-    private void store(String shirtName)
+
+    public void saveData(String cost)
     {
-        File f = new File("user.txt");
-        try
-        {
-            if(!f.exists())
-                f.createNewFile();
-            BufferedWriter bf = new BufferedWriter(new FileWriter("user.txt"));
-            bf.append(shirtName);
-            Log.d("Activity_display", "In store");
-            Toast.makeText(CollectionsMen.this,"Stored:" + shirtName,Toast.LENGTH_SHORT).show();
-            bf.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //String cost = p1.getText().toString().trim();
+        String key=databaseReference.push().getKey();
+        dataHandler dataHandler=new dataHandler(cost);
 
-
+        databaseReference.child(key).setValue(dataHandler);
     }
 }

@@ -65,6 +65,7 @@
         />
 
     <TextView
+        android:id="@+id/price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="255dp"
@@ -76,6 +77,7 @@
         />
 
     <TextView
+        android:id="@+id/price3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
@@ -87,6 +89,7 @@
         />
 
     <TextView
+        android:id="@+id/price4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="255dp"
@@ -105,7 +108,8 @@
         android:background="@drawable/roundredbutton"
         android:text="Buy"
         android:textStyle="bold"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+  />
 
     <Button
         android:id="@+id/Shirt2"
@@ -117,6 +121,7 @@
         android:textColor="@android:color/white"
         android:text="Buy"
         android:textStyle="bold"
+
         />
 
     <Button
@@ -129,6 +134,7 @@
         android:textColor="@android:color/white"
         android:text="Buy"
         android:textStyle="bold"
+
         />
 
     <Button

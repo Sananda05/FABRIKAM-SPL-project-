@@ -20,7 +20,7 @@ public class DisplayBoyKids extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(DisplayBoyKids.this, Cust_profile.class);
+                intent = new Intent(DisplayBoyKids.this, Menu.class);
                 startActivity(intent);
             }
         });

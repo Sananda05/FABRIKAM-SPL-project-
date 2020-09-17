@@ -91,7 +91,7 @@ public class SignIn extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                     Intent intent;
-                    intent = new Intent(SignIn.this, Menu.class);
+                    intent = new Intent(SignIn.this, CustomerOrTailor.class);
                     startActivity(intent);
 
 

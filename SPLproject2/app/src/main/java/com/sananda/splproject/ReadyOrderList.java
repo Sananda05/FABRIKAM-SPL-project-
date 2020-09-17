@@ -3,10 +3,11 @@ package com.sananda.splproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -14,46 +15,54 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cust_profile extends AppCompatActivity {
+public class ReadyOrderList extends AppCompatActivity {
 
     private ListView listView;
 
     DatabaseReference databaseReference;
-    private List<ProfileData> profileList;
-    private ProfileAdapter profileAdapter;
+    private List<dataHandler> dataList;
+    private DataAdapter dataAdapter;
+
+    private Button backMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cust_profile);
+        setContentView(R.layout.activity_order_list);
 
         databaseReference= FirebaseDatabase.getInstance().getReference();
-        profileList=new ArrayList<>();
-        profileAdapter=new ProfileAdapter(Cust_profile.this,profileList);
+        dataList=new ArrayList<>();
+        dataAdapter=new DataAdapter(ReadyOrderList.this,dataList);
 
-        listView=findViewById(R.id.profileList);
+        backMenu=findViewById(R.id.backMenu);
+
+        listView=findViewById(R.id.ListViewId);
+
+        backMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(ReadyOrderList.this,Menu.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    public void onStart(){
+   public void onStart(){
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                profileList.clear();
+
+
                 for(DataSnapshot dataSnapshot : snapshot.getChildren())
                 {
-                    ProfileData profileData =dataSnapshot.getValue(ProfileData.class);
-                    profileList.add(profileData);
+                    dataHandler dataHandler =dataSnapshot.getValue(dataHandler.class);
+                    dataList.add(dataHandler);
                 }
-                listView.setAdapter(profileAdapter);
+                listView.setAdapter(dataAdapter);
             }
 
             @Override

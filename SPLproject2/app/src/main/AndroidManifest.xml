@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".CreateDesign"></activity>
+        <activity android:name=".TailorView"></activity>
+        <activity android:name=".CustomOrderList" />
+        <activity android:name=".CustomerOrTailor" />
+        <activity android:name=".PaymentMethod" />
+        <activity android:name=".ReadyOrderList" />
+        <activity android:name=".measurement" />
+        <activity android:name=".pocket" />
+        <activity android:name=".sleeve" />
+        <activity android:name=".SetProfile" />
+        <activity android:name=".CreateDesign" />
         <activity android:name=".DesignType" />
         <activity android:name=".Fabrics" />
         <activity android:name=".DisplayBoyKids" />

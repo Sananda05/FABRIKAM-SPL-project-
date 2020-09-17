@@ -51,6 +51,16 @@ public class Menu extends AppCompatActivity {
                     startActivity(intent);
 
                 }
+                else if(id==R.id.ReadyorderList)
+                {
+                    Intent intent=new Intent(Menu.this, ReadyOrderList.class);
+                    startActivity(intent);
+                }
+                else if(id==R.id.CustonorderList)
+                {
+                    Intent intent=new Intent(Menu.this, CustomOrderList.class);
+                    startActivity(intent);
+                }
 
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;

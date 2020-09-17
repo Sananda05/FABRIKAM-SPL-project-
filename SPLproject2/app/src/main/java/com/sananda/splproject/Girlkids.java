@@ -20,7 +20,7 @@ public class Girlkids extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(Girlkids.this, Cust_profile.class);
+                intent = new Intent(Girlkids.this, Menu.class);
                 startActivity(intent);
             }
         });

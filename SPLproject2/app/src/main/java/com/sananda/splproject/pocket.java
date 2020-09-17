@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Fabrics extends AppCompatActivity {
+public class pocket extends AppCompatActivity {
 
     String tag;
 
@@ -27,22 +27,22 @@ public class Fabrics extends AppCompatActivity {
 
     DatabaseReference databaseReference;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fabrics);
+        setContentView(R.layout.activity_pocket);
 
-        b1 = findViewById(R.id.button1);
-        b2 = findViewById(R.id.button2);
-        b3=findViewById(R.id.button3);
-        b4=findViewById(R.id.button4);
+        t1=findViewById(R.id.t1);
+        t2=findViewById(R.id.t2);
+        t3=findViewById(R.id.t3);
+        t4=findViewById(R.id.t4);
 
-        Button next=findViewById(R.id.next);
-
-         t1=findViewById(R.id.t1);
-         t2=findViewById(R.id.t2);
-         t3=findViewById(R.id.t3);
-         t4=findViewById(R.id.t4);
+         Button b1 = findViewById(R.id.button1);
+         Button b2 = findViewById(R.id.button2);
+         Button b3 = findViewById(R.id.button3);
+         Button b4 = findViewById(R.id.button4);
+         Button next=findViewById(R.id.next);
 
          databaseReference= FirebaseDatabase.getInstance().getReference();
 
@@ -50,7 +50,7 @@ public class Fabrics extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(Fabrics.this, sleeve.class);
+                intent = new Intent(pocket.this, measurement.class);
                 startActivity(intent);
             }
         });
@@ -58,26 +58,22 @@ public class Fabrics extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 tag=t1.getText().toString().trim();
                 saveData(tag);
-
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 tag=t2.getText().toString().trim();
                 saveData(tag);
-
             }
         });
 
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tag = t3.getText().toString().trim();
+                tag=t3.getText().toString().trim();
                 saveData(tag);
             }
         });
@@ -85,7 +81,7 @@ public class Fabrics extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tag= t4.getText().toString().trim();
+                tag=t4.getText().toString().trim();
                 saveData(tag);
             }
         });
@@ -98,5 +94,4 @@ public class Fabrics extends AppCompatActivity {
 
         databaseReference.child(key).setValue(fabricDataHandler);
     }
-
 }

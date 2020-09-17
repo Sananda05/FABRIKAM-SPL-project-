@@ -7,9 +7,22 @@
         android:icon="@drawable/userprofile"
         />
 
-    <item android:id="@+id/orderList"
-        android:title="Order List"
-        android:icon="@drawable/orderlist"/>
+    <item android:title="Order List"
+        android:icon="@drawable/orderlist">
+        <menu>
+
+            <item android:id="@+id/ReadyorderList"
+                android:title=" Ready Order List"
+                />
+            <item android:id="@+id/CustonorderList"
+                android:title="Customized Order List"
+                />
+
+
+        </menu>
+
+
+    </item>
 
 <item android:title="Others">
 

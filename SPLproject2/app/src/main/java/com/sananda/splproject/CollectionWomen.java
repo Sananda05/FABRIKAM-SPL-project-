@@ -22,7 +22,7 @@ public class CollectionWomen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(CollectionWomen.this, Cust_profile.class);
+                intent = new Intent(CollectionWomen.this, Menu.class);
                 startActivity(intent);
             }
         });
